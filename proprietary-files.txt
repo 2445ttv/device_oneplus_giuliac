@@ -47,6 +47,7 @@ odm/etc/init/init.audio.rc
 odm/lib64/liboprec_audrec.so
 odm/lib64/liboprec_audrec_wrapper.so
 odm/lib64/libtfa98xx.so
+vendor/etc/mem_logger_config.xml
 
 # Audio configs
 odm/etc/mixer_paths.xml
