@@ -1685,6 +1685,9 @@ odm/etc/nfc/libnfc-mtp-SN220.conf_23851:vendor/etc/libnfc-nxp.conf
 odm/etc/nfc/libnfc-nci.conf_23851:vendor/etc/libnfc-nci.conf
 odm/etc/nfc/sn220u.bin_sn220tu_fw_01_01_45:vendor/firmware/sn220u.bin
 
+# OPLUS Camera
+odm/lib64/libui.so:vendor/lib64/libui-stock.so;FIX_SONAME
+
 # OPLUS Display
 odm/bin/hw/vendor.oplus.hardware.displaypanelfeature-service
 odm/bin/cwb_utils_aidl
