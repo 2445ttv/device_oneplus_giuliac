@@ -89,9 +89,12 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libcwb_qcom_aidl.so': blob_fixup()
         .add_needed('libui_shim.so'),
     (
+        'odm/lib64/camera/components/com.oplus.node.mvgsat.so',
         'odm/lib64/camera/components/com.oplus.node.sstabphoto.so',
         'odm/lib64/hw/camera.oemlayer.so',
+        'odm/lib64/libmvgcommon.so',
         'odm/lib64/libsharebuffer_impl.so',
+        'vendor/lib64/camera/components/com.qti.node.dewarp.so',
     ): blob_fixup()
         .replace_needed('libui.so', 'libui-stock.so'),
     'vendor/lib64/libui-stock.so': blob_fixup()
