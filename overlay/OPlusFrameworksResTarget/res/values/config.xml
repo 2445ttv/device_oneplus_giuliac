@@ -12,7 +12,7 @@
     <integer name="config_brightness_ramp_rate_fast">400</integer>
 
     <!-- Slow brightness animation ramp rate in brightness units per second-->
-    <integer name="config_brightness_ramp_rate_slow">50</integer>
+    <integer name="config_brightness_ramp_rate_slow">100</integer>
 
     <!-- Indicate available ColorDisplayManager.COLOR_MODE_xxx. -->
     <integer-array name="config_availableColorModes">
@@ -26,7 +26,7 @@
          -2 is invalid so setting will resort to int value specified above.
          Set this to 0.0 to allow screen to go to minimal brightness.
          The user is forbidden from setting the brightness below this level. -->
-    <item type="dimen" name="config_screenBrightnessSettingMinimumFloat">0.001954079</item>
+    <item type="dimen" name="config_screenBrightnessSettingMinimumFloat">0.005</item>
 
     <!-- Maximum screen brightness allowed by the power manager.
          -2 is invalid so setting will resort to int value specified above.
@@ -49,8 +49,8 @@
          when adapting to brighter or darker environments.  This parameter controls how quickly
          brightness changes occur in response to an observed change in light level that exceeds the
          hysteresis threshold. -->
-    <integer name="config_autoBrightnessBrighteningLightDebounce">1000</integer>
-    <integer name="config_autoBrightnessDarkeningLightDebounce">750</integer>
+    <integer name="config_autoBrightnessBrighteningLightDebounce">300</integer>
+    <integer name="config_autoBrightnessDarkeningLightDebounce">400</integer>
 
     <!-- The maximum range of gamma adjustment possible using the screen
          auto-brightness adjustment setting. -->
@@ -132,9 +132,9 @@
          array. The brightness values must be non-negative and non-decreasing. This must be
          overridden in platform specific overlays -->
     <array name="config_autoBrightnessDisplayValuesNits">
-        <item>6.0</item>    <!--      0 - 1     -->
-        <item>12.0</item>   <!--      1 - 6     -->
-        <item>30.0</item>   <!--      6 - 10    -->
+        <item>12.0</item>    <!--      0 - 1     -->
+        <item>20.0</item>   <!--      1 - 6     -->
+        <item>40.0</item>   <!--      6 - 10    -->
         <item>100.0</item>  <!--     10 - 20    -->
         <item>140.0</item>  <!--     20 - 30    -->
         <item>160.0</item>  <!--     30 - 40    -->
@@ -218,8 +218,8 @@
          the screen brightness is recalculated. See the config_ambientThresholdLevels
          description for how the constraint value is chosen. -->
     <integer-array name="config_ambientBrighteningThresholds">
-        <item>5000</item> <!--     0 - 50    -->
-        <item>1500</item> <!--    50 - 115   -->
+        <item>1000</item> <!--     0 - 50    -->
+        <item>1000</item> <!--    50 - 115   -->
         <item>750</item>  <!--   115 - 500   -->
         <item>600</item>  <!--   500 - 1000  -->
         <item>500</item>  <!--  1000 - 2000  -->
