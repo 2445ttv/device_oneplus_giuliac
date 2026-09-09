@@ -9,10 +9,10 @@
     <bool name="config_automatic_brightness_available">true</bool>
 
     <!-- Fast brightness animation ramp rate in brightness units per second-->
-    <integer name="config_brightness_ramp_rate_fast">400</integer>
+    <integer name="config_brightness_ramp_rate_fast">800</integer>
 
     <!-- Slow brightness animation ramp rate in brightness units per second-->
-    <integer name="config_brightness_ramp_rate_slow">100</integer>
+    <integer name="config_brightness_ramp_rate_slow">250</integer>
 
     <!-- Indicate available ColorDisplayManager.COLOR_MODE_xxx. -->
     <integer-array name="config_availableColorModes">
@@ -49,8 +49,8 @@
          when adapting to brighter or darker environments.  This parameter controls how quickly
          brightness changes occur in response to an observed change in light level that exceeds the
          hysteresis threshold. -->
-    <integer name="config_autoBrightnessBrighteningLightDebounce">300</integer>
-    <integer name="config_autoBrightnessDarkeningLightDebounce">400</integer>
+    <integer name="config_autoBrightnessBrighteningLightDebounce">100</integer>
+    <integer name="config_autoBrightnessDarkeningLightDebounce">150</integer>
 
     <!-- The maximum range of gamma adjustment possible using the screen
          auto-brightness adjustment setting. -->
@@ -132,10 +132,10 @@
          array. The brightness values must be non-negative and non-decreasing. This must be
          overridden in platform specific overlays -->
     <array name="config_autoBrightnessDisplayValuesNits">
-        <item>12.0</item>    <!--      0 - 1     -->
-        <item>20.0</item>   <!--      1 - 6     -->
-        <item>40.0</item>   <!--      6 - 10    -->
-        <item>100.0</item>  <!--     10 - 20    -->
+        <item>30.0</item>    <!--      0 - 1     -->
+        <item>45.0</item>   <!--      1 - 6     -->
+        <item>65.0</item>   <!--      6 - 10    -->
+        <item>120.0</item>  <!--     10 - 20    -->
         <item>140.0</item>  <!--     20 - 30    -->
         <item>160.0</item>  <!--     30 - 40    -->
         <item>180.0</item>  <!--     40 - 50    -->
@@ -218,13 +218,13 @@
          the screen brightness is recalculated. See the config_ambientThresholdLevels
          description for how the constraint value is chosen. -->
     <integer-array name="config_ambientBrighteningThresholds">
-        <item>1000</item> <!--     0 - 50    -->
-        <item>1000</item> <!--    50 - 115   -->
-        <item>750</item>  <!--   115 - 500   -->
-        <item>600</item>  <!--   500 - 1000  -->
-        <item>500</item>  <!--  1000 - 2000  -->
-        <item>500</item>  <!--  2000 - 4000  -->
-        <item>500</item>  <!--     4000+     -->
+        <item>200</item> <!--     0 - 50    -->
+        <item>200</item> <!--    50 - 115   -->
+        <item>200</item> <!--   115 - 500   -->
+        <item>250</item> <!--   500 - 1000  -->
+        <item>300</item> <!--  1000 - 2000  -->
+        <item>300</item> <!--  2000 - 4000  -->
+        <item>300</item> <!--     4000+     -->
     </integer-array>
 
     <!-- Array of hysteresis constraint values for darkening, represented as tenths of a
@@ -234,13 +234,13 @@
          the screen brightness is recalculated. See the config_ambientThresholdLevels
          description for how the constraint value is chosen. -->
     <integer-array name="config_ambientDarkeningThresholds">
-        <item>1</item>    <!--     0 - 50    -->
-        <item>50</item>   <!--    50 - 150   -->
-        <item>450</item>  <!--   115 - 500   -->
-        <item>500</item>  <!--   500 - 1000  -->
-        <item>500</item>  <!--  1000 - 2000  -->
-        <item>500</item>  <!--  2000 - 4000  -->
-        <item>500</item>  <!--     4000+     -->
+        <item>100</item>  <!--     0 - 50    -->
+        <item>100</item>  <!--    50 - 150   -->
+        <item>150</item>  <!--   115 - 500   -->
+        <item>200</item>  <!--   500 - 1000  -->
+        <item>250</item>  <!--  1000 - 2000  -->
+        <item>250</item>  <!--  2000 - 4000  -->
+        <item>250</item>  <!--     4000+     -->
     </integer-array>
 
     <!-- Array of hysteresis constraint values for brightening, represented as tenths of a
