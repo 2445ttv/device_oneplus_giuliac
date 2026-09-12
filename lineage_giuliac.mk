@@ -26,6 +26,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     RisingMaintainer="franlop77" \
     RisingChipset="Snapdragon 8 Gen 3"
 
+# rising Maintainer
+RISING_MAINTAINER=franlop77
+
 PRODUCT_NAME := lineage_giuliac
 PRODUCT_DEVICE := giuliac
 PRODUCT_MANUFACTURER := OnePlus
