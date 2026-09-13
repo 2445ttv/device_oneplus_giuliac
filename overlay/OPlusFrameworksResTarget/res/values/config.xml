@@ -12,10 +12,10 @@
     <bool name="config_automatic_brightness_available">true</bool>
 
     <!-- Fast brightness animation ramp rate in brightness units per second-->
-    <integer name="config_brightness_ramp_rate_fast">800</integer>
+    <integer name="config_brightness_ramp_rate_fast">450</integer>
 
     <!-- Slow brightness animation ramp rate in brightness units per second-->
-    <integer name="config_brightness_ramp_rate_slow">250</integer>
+    <integer name="config_brightness_ramp_rate_slow">300</integer>
 
     <!-- Indicate available ColorDisplayManager.COLOR_MODE_xxx. -->
     <integer-array name="config_availableColorModes">
@@ -52,8 +52,8 @@
          when adapting to brighter or darker environments.  This parameter controls how quickly
          brightness changes occur in response to an observed change in light level that exceeds the
          hysteresis threshold. -->
-    <integer name="config_autoBrightnessBrighteningLightDebounce">100</integer>
-    <integer name="config_autoBrightnessDarkeningLightDebounce">150</integer>
+    <integer name="config_autoBrightnessBrighteningLightDebounce">150</integer>
+    <integer name="config_autoBrightnessDarkeningLightDebounce">200</integer>
 
     <!-- The maximum range of gamma adjustment possible using the screen
          auto-brightness adjustment setting. -->
@@ -135,7 +135,7 @@
          array. The brightness values must be non-negative and non-decreasing. This must be
          overridden in platform specific overlays -->
     <array name="config_autoBrightnessDisplayValuesNits">
-        <item>30.0</item>    <!--      0 - 1     -->
+        <item>45.0</item>    <!--      0 - 1     -->
         <item>45.0</item>   <!--      1 - 6     -->
         <item>65.0</item>   <!--      6 - 10    -->
         <item>120.0</item>  <!--     10 - 20    -->
