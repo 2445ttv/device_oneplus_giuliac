@@ -2,7 +2,7 @@
 bluetooth.device.default_name=OnePlus Ace 5
 
 # Camera
-vendor.camera.aux.packagelist=com.android.camera,org.lineageos.aperture,org.lineageos.aperture.dev
+persist.vendor.camera.privapp.list=org.lineageos.aperture,com.oplus.camera,com.ss.android.ugc.aweme,org.codeaurora.snapcam
 
 # Graphics
 debug.sf.auto_latch_unsignaled=1
