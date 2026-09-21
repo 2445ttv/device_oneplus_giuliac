@@ -4,8 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
-
 # Partitions
 BOARD_SUPER_PARTITION_SIZE := 14578294784
 

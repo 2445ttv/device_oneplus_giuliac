@@ -51,6 +51,9 @@ lib_fixups: lib_fixups_user_type = {
 
 blob_fixups: blob_fixups_user_type = {
     'odm/etc/camera/CameraHWConfiguration.config': blob_fixup()
+        # Disable face detection AE behaviour
+        .regex_replace(r'(enableSWfdForThirdCamUnit += )TRUE', r'\1FALSE')
+        .regex_replace(r'(fdSupport += )TRUE;', r'\1FALSE;')
         # Expose AUX cameras
         .regex_replace('SystemCamera =  0;  0;  0;  1;  0; 1;', 'SystemCamera =  0;  0;  0;  0;  0; 0;'),
     'odm/lib64/libAlgoProcess.so': blob_fixup()
@@ -65,8 +68,7 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('AHardwareBuffer_lock')
         .clear_symbol_version('AHardwareBuffer_lockPlanes')
         .clear_symbol_version('AHardwareBuffer_release')
-        .clear_symbol_version('AHardwareBuffer_unlock')
-        .replace_needed('libui.so', 'libui-stock.so'),
+        .clear_symbol_version('AHardwareBuffer_unlock'),
     'odm/lib64/libarcsoft_high_dynamic_range_v4.so': blob_fixup()
         .clear_symbol_version('remote_handle_close')
         .clear_symbol_version('remote_handle_invoke')
@@ -88,17 +90,6 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('NFC_DEBUG_ENABLED=1', 'NFC_DEBUG_ENABLED=0'),
     'vendor/lib64/libcwb_qcom_aidl.so': blob_fixup()
         .add_needed('libui_shim.so'),
-    (
-        'odm/lib64/camera/components/com.oplus.node.mvgsat.so',
-        'odm/lib64/camera/components/com.oplus.node.sstabphoto.so',
-        'odm/lib64/hw/camera.oemlayer.so',
-        'odm/lib64/libmvgcommon.so',
-        'odm/lib64/libsharebuffer_impl.so',
-        'vendor/lib64/camera/components/com.qti.node.dewarp.so',
-    ): blob_fixup()
-        .replace_needed('libui.so', 'libui-stock.so'),
-    'vendor/lib64/libui-stock.so': blob_fixup()
-        .replace_needed('android.hardware.graphics.common-V4-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
