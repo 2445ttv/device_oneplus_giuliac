@@ -11,8 +11,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from giuliac device
 $(call inherit-product, device/oneplus/giuliac/device.mk)
 
-# Disable EPPE
-TARGET_DISABLE_EPPE := true
+# add apk
+PRODUCT_PACKAGES += BCR
 
 # Inherit some common Infinity stuff.
 $(call inherit-product, vendor/Infinity/config/common_full_phone.mk)
