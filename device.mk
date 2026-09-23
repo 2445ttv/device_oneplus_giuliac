@@ -78,3 +78,5 @@ $(call inherit-product, device/oneplus/sm8650-common/common.mk)
 
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/oneplus/giuliac/giuliac-vendor.mk)
+
+include vendor/lineage-priv/keys/keys.mk
