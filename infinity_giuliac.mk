@@ -1,0 +1,40 @@
+#
+# Copyright (C) 2025 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+# Inherit from giuliac device
+$(call inherit-product, device/oneplus/giuliac/device.mk)
+
+# add apk
+PRODUCT_PACKAGES += BCR
+
+# Inherit some common infinity stuff.
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
+
+# Infinity flags
+INFINITY_MAINTAINER := o_O
+INFINITY_BUILD_TYPE := UNOFFICIAL
+TARGET_HAS_UDFPS := true
+WITH_GAPPS := true
+
+PRODUCT_NAME := infinity_giuliac
+PRODUCT_DEVICE := giuliac
+PRODUCT_MANUFACTURER := OnePlus
+PRODUCT_BRAND := OnePlus
+PRODUCT_MODEL := PKG110
+
+PRODUCT_GMS_CLIENTID_BASE := android-oneplus
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BuildDesc="qssi-user 16 BP2A.250605.015 1786441098879 release-keys" \
+    BuildFingerprint=OnePlus/PKG110/OP5D2BL1:16/UKQ1.231108.001/V.4b5889d-26206c7-2678746:user/release-keys \
+    DeviceName=OP5D2BL1 \
+    DeviceProduct=PKG110 \
+    SystemDevice=OP5D2BL1 \
+    SystemName=PKG110
