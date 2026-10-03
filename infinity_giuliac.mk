@@ -11,10 +11,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from giuliac device
 $(call inherit-product, device/oneplus/giuliac/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Infinity stuff.
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_giuliac
+# Infinity flags
+INFINITY_MAINTAINER := Genoxci
+INFINITY_BUILD_TYPE := OFFICIAL
+TARGET_HAS_UDFPS := true
+WITH_GAPPS := true
+
+# Device identifier
+PRODUCT_NAME := infinity_giuliac
 PRODUCT_DEVICE := giuliac
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus

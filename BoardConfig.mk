@@ -23,6 +23,9 @@ TARGET_KERNEL_ADDITIONAL_FLAGS += \
     CONFIG_GIULIA_DTB=y \
     CONFIG_GIULIAC_DTB=y
 
+# Partitions
+-include vendor/infinity/config/BoardConfigReservedSize.mk
+
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
 TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/system_ext.prop
