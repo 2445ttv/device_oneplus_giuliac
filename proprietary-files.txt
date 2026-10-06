@@ -1550,8 +1550,8 @@ odm/etc/dolby/dolby_vision.cfg
 odm/etc/media_codecs_dolby_vision.xml:vendor/etc/media_codecs_dolby_vision.xml
 odm/lib64/libdolbyclstc.so
 my_product/etc/dolby_vision.cfg:product/etc/dolby_vision.cfg
-my_product/lib64/libdolbyeffect_4.1.so:product/lib64/libdolbyeffect_4.1.so
-my_product/lib64/liboplusdolbyeffect_4.1.so:product/lib64/liboplusdolbyeffect_4.1.so
+my_product/lib64/libdolbyeffect_4.1.so:system_ext/lib64/libdolbyeffect_4.1.so
+my_product/lib64/liboplusdolbyeffect_4.1.so:system_ext/lib64/liboplusdolbyeffect_4.1.so
 system/etc/dolby_vision.cfg
 system/lib64/vendor.dolby.dvs-V1-ndk.so
 vendor/etc/dolby_vision.cfg
