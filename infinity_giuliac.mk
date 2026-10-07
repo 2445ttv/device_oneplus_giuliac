@@ -15,8 +15,8 @@ $(call inherit-product, device/oneplus/giuliac/device.mk)
 $(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
 # Infinity flags
-INFINITY_MAINTAINER := Genoxci
-INFINITY_BUILD_TYPE := OFFICIAL
+INFINITY_MAINTAINER := o_O
+INFINITY_BUILD_TYPE := UNOFFICIAL
 TARGET_HAS_UDFPS := true
 WITH_GAPPS := true
 
