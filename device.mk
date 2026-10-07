@@ -54,6 +54,10 @@ PRODUCT_PACKAGES += \
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 35
 
+# Remove Packages
+PRODUCT_PACKAGES += \
+    RemovePackagesGiuliac
+    
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
