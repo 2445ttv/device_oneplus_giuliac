@@ -1,0 +1,5 @@
+on boot
+    # DC dimming
+    chown system system /sys/kernel/oplus_display/pwm_onepulse
+    chmod 0660 /sys/kernel/oplus_display/pwm_onepulse
+    write /sys/kernel/oplus_display/pwm_onepulse 0

@@ -1,0 +1,27 @@
+// SPDX-License-Identifier: Apache-2.0
+
+android_app {
+    name: "OnePlusSettings",
+    defaults: ["SettingsLibDefaults"],
+    srcs: ["src/**/*.java"],
+    certificate: "platform",
+    platform_apis: true,
+    system_ext_specific: true,
+    required: ["init.oneplus-settings.rc"],
+
+    static_libs: [
+        "androidx.preference_preference",
+        "org.lineageos.settings.resources",
+    ],
+
+    optimize: {
+        proguard_flags_files: ["proguard.flags"],
+    },
+}
+
+prebuilt_etc {
+    name: "init.oneplus-settings.rc",
+    src: "init.oneplus-settings.rc",
+    sub_dir: "init",
+    vendor: true,
+}
