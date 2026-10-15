@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/device_settings_title">
+    <PreferenceCategory android:title="@string/display_category_title">
+        <SwitchPreferenceCompat
+            android:key="dc_dimming"
+            android:defaultValue="false"
+            android:persistent="false"
+            android:title="@string/dc_dimming_title"
+            android:summary="@string/dc_dimming_summary" />
+    </PreferenceCategory>
+</PreferenceScreen>

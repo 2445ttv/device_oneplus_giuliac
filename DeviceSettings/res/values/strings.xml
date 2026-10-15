@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="device_settings_title">OnePlus Settings</string>
+    <string name="device_settings_summary">Device-specific features</string>
+    <string name="display_category_title">Display</string>
+    <string name="dc_dimming_title">DC dimming</string>
+    <string name="dc_dimming_summary">Reduce display flicker</string>
+    <string name="dc_dimming_unavailable">DC dimming is unavailable on this display</string>
+    <string name="dc_dimming_error">Could not change DC dimming</string>
+</resources>
