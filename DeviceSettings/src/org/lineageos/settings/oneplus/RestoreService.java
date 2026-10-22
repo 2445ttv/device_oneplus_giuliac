@@ -51,6 +51,7 @@ public class RestoreService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        HapticStyle.restore(this);
         scheduleRestore();
         return START_STICKY;
     }

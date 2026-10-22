@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <!-- Supported profiles and the default are supplied by the device overlay. -->
+    <string-array name="haptic_effect_style_entries" translatable="false" />
+    <string-array name="haptic_effect_style_values" translatable="false" />
+</resources>

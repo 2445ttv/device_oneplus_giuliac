@@ -1,0 +1,2 @@
+on property:debug.haptic_profile=*
+    setprop persist.vendor.haptic_profile ${debug.haptic_profile}

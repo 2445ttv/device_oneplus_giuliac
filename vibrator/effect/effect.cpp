@@ -35,26 +35,53 @@
 
 #define ARRAY_SIZE(a) (sizeof(a) / sizeof(*(a)))
 
-#include "standard_effect.h"
+#include "generated_effect.h"
 #include "primitive_effect.h"
+#include <android-base/properties.h>
+#include <string>
 
-const struct effect_stream *get_effect_stream(uint32_t effect_id)
-{
-    int i;
+const struct effect_stream* find_effect(const struct effect_stream* arr, size_t size, uint32_t effect_id) {
+    for (size_t i = 0; i < size; ++i) {
+        if (effect_id == arr[i].effect_id)
+            return &arr[i];
+    }
+    return NULL;
+}
+
+const struct effect_stream* get_effect_stream(uint32_t effect_id) {
+    using android::base::GetProperty;
+    const struct effect_stream *selected_effects = effects;
+    size_t effects_size = ARRAY_SIZE(effects);
+    std::string profile = GetProperty("persist.vendor.haptic_profile", "default");
 
     if ((effect_id & 0x8000) != 0) {
-        effect_id = effect_id & 0x7fff;
-
-        for (i = 0; i < ARRAY_SIZE(primitives); i++) {
-            if (effect_id == primitives[i].effect_id)
-                return &primitives[i];
-        }
-    } else {
-        for (i = 0; i < ARRAY_SIZE(effects); i++) {
-            if (effect_id == effects[i].effect_id)
-                return &effects[i];
+        effect_id &= 0x7fff;
+        if (profile == "gentle" || profile == "op13gentle") {
+            return find_effect(primitives_gentle, ARRAY_SIZE(primitives_gentle), effect_id);
+        } else {
+            return find_effect(primitives, ARRAY_SIZE(primitives), effect_id);
         }
     }
 
-    return NULL;
+    if (profile == "soft") {
+        selected_effects = effects_soft;
+        effects_size = ARRAY_SIZE(effects_soft);
+    } else if (profile == "richtap") {
+        selected_effects = effects_richtap;
+        effects_size = ARRAY_SIZE(effects_richtap);
+    } else if (profile == "crisp") {
+        selected_effects = effects_crisp;
+        effects_size = ARRAY_SIZE(effects_crisp);
+    } else if (profile == "gentle") {
+        selected_effects = effects_gentle;
+        effects_size = ARRAY_SIZE(effects_gentle);
+    } else if (profile == "op13crisp") {
+        selected_effects = effects_op13crisp;
+        effects_size = ARRAY_SIZE(effects_op13crisp);
+    } else if (profile == "op13gentle") {
+        selected_effects = effects_op13gentle;
+        effects_size = ARRAY_SIZE(effects_op13gentle);
+    }
+
+    return find_effect(selected_effects, effects_size, effect_id);
 }

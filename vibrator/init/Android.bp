@@ -1,0 +1,6 @@
+prebuilt_etc {
+    name: "init.haptics.rc",
+    src: "init.haptics.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
