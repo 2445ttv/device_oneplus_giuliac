@@ -1,0 +1,7 @@
+// SPDX-License-Identifier: Apache-2.0
+
+runtime_resource_overlay {
+    name: "OnePlusSettingsResTarget",
+    device_specific: true,
+    certificate: "platform",
+}

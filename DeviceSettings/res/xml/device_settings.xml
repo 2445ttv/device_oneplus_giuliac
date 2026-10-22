@@ -10,4 +10,14 @@
             android:title="@string/dc_dimming_title"
             android:summary="@string/dc_dimming_summary" />
     </PreferenceCategory>
+    <PreferenceCategory
+        android:key="haptics_category"
+        android:title="@string/haptics_category_title">
+        <ListPreference
+            android:key="haptic_style"
+            android:persistent="false"
+            android:title="@string/haptic_effect_style_title"
+            android:entries="@array/haptic_effect_style_entries"
+            android:entryValues="@array/haptic_effect_style_values" />
+    </PreferenceCategory>
 </PreferenceScreen>

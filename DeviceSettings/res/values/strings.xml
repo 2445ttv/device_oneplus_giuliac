@@ -8,4 +8,7 @@
     <string name="dc_dimming_summary">Reduce display flicker</string>
     <string name="dc_dimming_unavailable">DC dimming is unavailable on this display</string>
     <string name="dc_dimming_error">Could not change DC dimming</string>
+    <string name="haptics_category_title">Haptics</string>
+    <string name="haptic_effect_style_title">Haptic effect style</string>
+    <string name="haptic_effect_style_error">Could not change haptic effect style</string>
 </resources>
